@@ -1,0 +1,302 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #f4f4f4;
+    background-color: #121212; /* Dark background per source visuals */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Reusable Classes */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #ff9f1c; /* Takoyaki Gold/Orange */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn {
+    display: inline-block;
+    background: #d62828; /* Red Accent */
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #b01e1e;
+}
+
+/* Header */
+header {
+    background: #1a1a1a;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #333;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#balls {
+    color: red;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: #fffb00;
+}
+
+.logo span {
+    color: #ffee00;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ccc;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff9f1c;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* About Section */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+
+.about-text h2 {
+    color: #ff9f1c;  /* Takoyaki orange */
+   
+}
+
+/* Images */
+.img-placeholder {
+    width: 100%;
+    height: 300px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px dashed #555;
+    color: #777;
+}
+
+.img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px; 
+}
+
+/* Menu Section */
+.bg-dark {
+    background-color: #0d0d0d;
+}
+
+.category-title {
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
+    border-left: 5px solid #d62828;
+    padding-left: 15px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.menu-card {
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 1px solid #333;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff9f1c;
+}
+
+.card-img {
+    height: 150px;
+    background: #2a2a2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.card-info {
+    padding: 20px;
+}
+
+.card-info h4 {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Feedback Section */
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: #1f1f1f;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.quote {
+    font-style: italic;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.author {
+    display: block;
+    color: #ff9f1c;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    padding: 20px 0;
+    text-align: center;
+    color: #777;
+    font-size: 0.9rem;
+    border-top: 1px solid #222;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+    }
+    nav ul {
+        margin-top: 20px;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Reverse Grid */
+.about-grid.reverse {
+    grid-template-columns: 1fr 1fr;
+}
+
+.about-grid.reverse .about-text {
+    order: 1;
+}
+
+.about-grid.reverse .about-image {
+    order: 2;
+}

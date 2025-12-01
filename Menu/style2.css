@@ -1,0 +1,202 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("Images/charcoal.jpg") center/cover no-repeat;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.menu-page {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 2vh;
+    position: relative;
+}
+
+/* HEADER */
+.menu-header {
+    text-align: center;
+    position: relative;
+}
+
+.fancy-text {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2rem, 4vw, 4rem);
+    color: #ffc107;
+    position: absolute;
+    left: 50%;
+    top: -4vh;
+    transform: translateX(-50%);
+}
+
+.octopus-icon {
+    position: absolute;
+    left: 50%;
+    top: -4.5vh;
+    transform: translateX(60%);
+    font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
+.main-menu-title {
+    font-size: clamp(3rem, 10vw, 6rem);
+    font-weight: 900;
+    letter-spacing: clamp(5px, 1vw, 10px);
+    color: #d62828;
+}
+
+/* CATEGORY BOX */
+.menu-categories {
+    position: absolute;
+    left: 50%;
+    top: 32vh;
+    transform: translateX(-50%);
+    width: clamp(250px, 30vw, 400px);
+    text-align: center;
+    z-index: 10;
+}
+
+.category-link {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 700;
+    margin: 2vh 0;
+    padding: 1vh 0;
+    display: block;
+    color: #fff;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.category-link:hover {
+    color: yellow;
+}
+
+.category-link.active {
+    color: #d62828;
+}
+
+/* ------------------------------------------- */
+/* DESKTOP LAYOUT — LEFT / RIGHT ABSOLUTE GRID */
+/* ------------------------------------------- */
+
+.item-card {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    max-width: 350px;
+}
+
+.item-image {
+    width: clamp(120px, 15vw, 200px);
+    border-radius: 10px;
+}
+
+.item-details {
+    max-width: 180px;
+    word-wrap: break-word;
+}
+
+.item-name {
+    font-size: clamp(1rem, 1.4vw, 1.4rem);
+    font-weight: 700;
+}
+
+.item-price {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    color: #ffc107;
+}
+
+/* ---- LEFT ITEMS ---- */
+.item-left-1 { top: 28vh; left: 4vw; }
+.item-left-2 { top: 55vh; left: 4vw; }
+
+.item-left-1::after,
+.item-left-2::after {
+    content: "";
+    position: absolute;
+    right: -1vw;
+    height: 100%;
+    width: 0.3vw;
+    background: #fff;
+}
+
+/* ---- RIGHT ITEMS ---- */
+.item-right-1 {
+    top: 30vh;
+    right: 4vw;
+    flex-direction: row-reverse;
+}
+
+.item-right-2 {
+    top: 55vh;
+    right: 4vw;
+    flex-direction: row-reverse;
+}
+
+.item-right-1::before,
+.item-right-2::before {
+    content: "";
+    position: absolute;
+    left: -1vw;
+    height: 100%;
+    width: 0.3vw;
+    background: #fff;
+}
+
+/* ------------------------------------------------ */
+/* RESPONSIVE BEHAVIOR — SLIGHT OFFSET REDUCTIONS   */
+/* ------------------------------------------------ */
+@media (max-width: 1200px) {
+    .item-left-1, .item-left-2 { left: 2vw; }
+    .item-right-1, .item-right-2 { right: 2vw; }
+}
+
+@media (max-width: 900px) {
+    .item-left-1, .item-left-2 { left: 1vw; }
+    .item-right-1, .item-right-2 { right: 1vw; }
+}
+
+@media (max-width: 700px) {
+
+    /* Category Box Moves Up */
+    .menu-categories {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin-top: 4vh;
+    }
+
+    /* ALL ITEMS SWITCH TO NORMAL FLOW */
+    .item-card {
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        transform: none;
+        margin: 40px auto;
+        max-width: 90%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Better mobile images */
+    .item-image {
+        width: clamp(150px, 60vw, 260px);
+    }
+
+    /* Remove vertical dividers */
+    .item-left-1::after,
+    .item-left-2::after,
+    .item-right-1::before,
+    .item-right-2::before {
+        display: none;
+    }
+}

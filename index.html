@@ -28,8 +28,7 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <img loading="lazy" src="images/home img.png" 
-            width="1900" height="400" alt="" class="img-responsive">
+            <img loading="lazy" src="images/home img.png" width="1900" height="400" alt="" class="img-responsive">
         </div>
     </section>
 
@@ -84,46 +83,109 @@
         <div class="container">
             <h2 class="section-title">Our Menu</h2>
 
-            <h3 class="category-title">Takoyaki Specials</h3>
+            <h3 class="category-title" id="takoyaki">Takoyaki Specials</h3>
             <div class="menu-grid">
                 <div class="menu-card">
-                    <div class="card-img"><img src="images/Classic_Takoyaki-removebg-preview.png"></div>
-                    <div class="card-info">
-                        <h4>Classic Takoyaki</h4>
-                        <p>Authentic Osaka style.</p>
+                    <a href="#classic" class="menu-card">
+                        <div class="card-img"><img src="images/Classic_Takoyaki-removebg-preview.png"></div>
+                        <div class="card-info">
+                            <h4>Classic Takoyaki</h4>
+                            <p>Authentic Osaka style.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div id="classic" class="popup-overlay">
+                    <div class="popup-box">
+                        <a href="#menu" class="close-btn">&times;</a>
+
+                        <h2>Classic Takoyaki</h2>
+                        <p>
+                            Ingredients: Octopus, cabbage, tempura scraps, green onion, takoyaki sauce,
+                            Japanese mayo, bonito flakes, batter mix.
+                        </p>
                     </div>
                 </div>
+
                 <div class="menu-card">
-                    <div class="card-img"><img src="images/Spicy_Takoyaki-removebg-preview.png"></div>
-                    <div class="card-info">
-                        <h4>Spicy Takoyaki</h4>
-                        <p>With a kick of siling labuyo.</p>
+                    <a href="#spicy" class="menu-card">
+                        <div class="card-img"><img src="images/Spicy_Takoyaki-removebg-preview.png"></div>
+                        <div class="card-info">
+                            <h4>Spicy Takoyaki</h4>
+                            <p>With a kick of siling labuyo.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div id="spicy" class="popup-overlay">
+                    <div class="popup-box">
+                        <a href="#menu" class="close-btn">&times;</a>
+
+                        <h2>Spicy Takoyaki</h2>
+                        <p>
+                            Ingredients: Octopus, cabbage, tempura scraps, green onion, takoyaki sauce,
+                            Japanese mayo, bonito flakes, batter mix.
+                        </p>
                     </div>
+
                 </div>
                 <div class="menu-card">
+                    <a href="#cheesy" class="menu-card">
                     <div class="card-img"><img src="images/Cheesy_Takoyaki-removebg-preview.png"></div>
                     <div class="card-info">
                         <h4>Cheesy Takoyaki</h4>
                         <p>Loaded with rich local cheese.</p>
                     </div>
+                    </a>
                 </div>
+
+                <div id="cheesy" class="popup-overlay">
+                    <div class="popup-box">
+                        <a href="#menu" class="close-btn">&times;</a>
+
+                        <h2>Cheesy Takoyaki</h2>
+                        <p>
+                            Ingredients: Octopus, cabbage, tempura scraps, green onion, takoyaki sauce,
+                            Japanese mayo, bonito flakes, batter mix.
+                        </p>
+                    </div>
+                </div>
+
                 <div class="menu-card">
+                    <a href="#ultra" class="menu-card">
                     <div class="card-img"><img src="images/Ultra_Takoyaki-removebg-preview.png"></div>
                     <div class="card-info">
                         <h4>Ultra Takoyaki</h4>
                         <p>The ultimate flavor explosion.</p>
                     </div>
+                    </a>
                 </div>
             </div>
 
-            <h3 class="category-title">Rice Meals</h3>
+                <div id="ultra" class="popup-overlay">
+                    <div class="popup-box">
+                        <a href="#menu" class="close-btn">&times;</a>
+
+                        <h2>Ultra Takoyaki</h2>
+                        <p>
+                            Ingredients: Octopus, cabbage, tempura scraps, green onion, takoyaki sauce,
+                            Japanese mayo, bonito flakes, batter mix.
+                        </p>
+                    </div>
+                </div>
+
+            <h3 class="category-title" id="rice">Rice Meals</h3>
             <div class="menu-grid">
                 <div class="menu-card">
-                    <div class="card-img"><img src="images/tofu with white rice.png"></div>
-                    <div class="card-info">
-                        <h4>Tofu Square</h4>
-                        <p>Served with white rice.</p>
-                    </div>
+                    <a href="#tofu" class="menu-card">
+                        <div class="card-img">
+                            <img src="images/Classic_Takoyaki-removebg-preview.png">
+                        </div>
+                        <div class="card-info">
+                            <h4>Classic Takoyaki</h4>
+                            <p>Authentic Osaka style.</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="menu-card">
                     <div class="card-img"><img src="images/beef pares.png"></div>
@@ -189,7 +251,7 @@
                         <p>Crispy fried spring rolls.</p>
                     </div>
                 </div>
-                
+
             </div>
 
             <h3 class="category-title">Drinks</h3>
@@ -222,8 +284,8 @@
     </section>
 
     <section id="feedback" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Customer Feedback</h2>
+        <div class="fedback">
+            <h2 class="section-title-feedback">Customer Feedback</h2>
             <div class="testimonials">
 
                 <div class="testimonial-card">
@@ -254,6 +316,19 @@
             <p>Metro Manila, Philippines.</p>
         </div>
     </footer>
+
+
+    <div id="tofu" class="popup-overlay">
+        <div class="popup-box">
+            <a href="#takoyaki" class="close-btn">&times;</a>
+
+            <h2>tofu</h2>
+            <p>
+                Ingredients: Octopus, cabbage, tempura scraps, green onion,
+                takoyaki sauce, Japanese mayo, bonito flakes, batter mix.
+            </p>
+        </div>
+    </div>
 
 </body>
 

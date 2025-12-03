@@ -16,7 +16,7 @@ body {
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
-    padding-top: 2vh;
+    padding-top: 4vh;
     position: relative;
 }
 
@@ -26,20 +26,21 @@ body {
     position: relative;
 }
 
+/* lower the fancy text + icon */
 .fancy-text {
     font-family: "Playfair Display", serif;
     font-size: clamp(2rem, 4vw, 4rem);
     color: #ffc107;
     position: absolute;
     left: 50%;
-    top: -4vh;
+    top: -2vh;
     transform: translateX(-50%);
 }
 
 .octopus-icon {
     position: absolute;
     left: 50%;
-    top: -4.5vh;
+    top: -2.5vh;
     transform: translateX(60%);
     font-size: clamp(1.5rem, 3vw, 3rem);
 }
@@ -49,13 +50,14 @@ body {
     font-weight: 900;
     letter-spacing: clamp(5px, 1vw, 10px);
     color: #d62828;
+    margin-top: 2vh;
 }
 
 /* CATEGORY BOX */
 .menu-categories {
     position: absolute;
     left: 50%;
-    top: 32vh;
+    top: 30vh;
     transform: translateX(-50%);
     width: clamp(250px, 30vw, 400px);
     text-align: center;
@@ -73,18 +75,10 @@ body {
     text-decoration: none;
 }
 
-.category-link:hover {
-    color: yellow;
-}
+.category-link:hover { color: yellow; }
+.category-link.active { color: #d62828; }
 
-.category-link.active {
-    color: #d62828;
-}
-
-/* ------------------------------------------- */
-/* DESKTOP LAYOUT — LEFT / RIGHT ABSOLUTE GRID */
-/* ------------------------------------------- */
-
+/* MAIN ITEMS */
 .item-card {
     position: absolute;
     display: flex;
@@ -113,9 +107,9 @@ body {
     color: #ffc107;
 }
 
-/* ---- LEFT ITEMS ---- */
-.item-left-1 { top: 28vh; left: 4vw; }
-.item-left-2 { top: 55vh; left: 4vw; }
+/* LEFT ITEMS */
+.item-left-1 { top: 24vh; left: 4vw; }
+.item-left-2 { top: 52vh; left: 4vw; }
 
 .item-left-1::after,
 .item-left-2::after {
@@ -127,15 +121,17 @@ body {
     background: #fff;
 }
 
-/* ---- RIGHT ITEMS ---- */
+/* RIGHT ITEMS (FIXED — now moves correctly) */
 .item-right-1 {
-    top: 30vh;
+    position: absolute;
+    top: 24vh;
     right: 4vw;
     flex-direction: row-reverse;
 }
 
 .item-right-2 {
-    top: 55vh;
+    position: absolute;
+    top: 52vh;
     right: 4vw;
     flex-direction: row-reverse;
 }
@@ -150,9 +146,7 @@ body {
     background: #fff;
 }
 
-/* ------------------------------------------------ */
-/* RESPONSIVE BEHAVIOR — SLIGHT OFFSET REDUCTIONS   */
-/* ------------------------------------------------ */
+/* RESPONSIVE */
 @media (max-width: 1200px) {
     .item-left-1, .item-left-2 { left: 2vw; }
     .item-right-1, .item-right-2 { right: 2vw; }
@@ -164,8 +158,6 @@ body {
 }
 
 @media (max-width: 700px) {
-
-    /* Category Box Moves Up */
     .menu-categories {
         position: relative;
         top: 0;
@@ -174,25 +166,23 @@ body {
         margin-top: 4vh;
     }
 
-    /* ALL ITEMS SWITCH TO NORMAL FLOW */
+    /* mobile stacking */
     .item-card {
-        position: relative;
+        position: relative !important; /* stays responsive */
         left: 0;
         right: 0;
         top: 0;
-        transform: none;
         margin: 40px auto;
         max-width: 90%;
         flex-direction: column;
         text-align: center;
     }
 
-    /* Better mobile images */
     .item-image {
         width: clamp(150px, 60vw, 260px);
     }
 
-    /* Remove vertical dividers */
+
     .item-left-1::after,
     .item-left-2::after,
     .item-right-1::before,
